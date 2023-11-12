@@ -1,0 +1,71 @@
+body {
+  max-width: 800px;
+  margin: 20px auto;
+  border: 1px solid #606060;
+  box-shadow: 7px 7px 5px #d2d2d2;
+  font-family: "Poppins", sans-serif;
+}
+
+div {
+  display: inline-flex;
+}
+aside {
+  max-width: 40%;
+  background: #f5f6f6;
+  padding: 20px;
+}
+
+main {
+  max-width: 60%;
+  padding: 20px;
+}
+
+img {
+  border-radius: 50%;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.contacts {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: black;
+}
+
+.project-link {
+  color: black;
+}
+.contact-link:hover,
+.project-link:hover {
+  color: rgb(113, 132, 155);
+}
+
+i {
+  margin-right: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 25px;
+}
+h3 {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin-top: 3px;
+}
