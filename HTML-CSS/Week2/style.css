@@ -176,7 +176,8 @@ p {
     background: linear-gradient(rgb(116, 164, 247), rgb(255, 255, 255));
   }
 
-  #grid-floats .grid-item {
+  #grid-floats .grid-item,
+  #grid-floats .grid-item:nth-child(2) {
     width: 95%;
     grid-column: span 3;
   }
@@ -186,7 +187,8 @@ p {
     grid-column: span 6;
   }
 
-  #grid-flex .grid-item {
+  #grid-flex .grid-item,
+  #grid-flex .grid-item:nth-child(2) {
     width: 24%;
     margin-right: 1%;
   }
