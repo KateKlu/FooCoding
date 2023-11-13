@@ -1,7 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: linear-gradient(-0.4turn, rgb(255, 252, 253), rgb(153, 185, 240));
   font-family: "Open Sans", sans-serif;
   color: rgb(22, 22, 70);
+  padding: 2rem 0;
 }
 h1,
 h2,
@@ -22,11 +28,21 @@ h1 {
 h2 {
   font-size: 2rem;
   font-style: italic;
+  padding: 2rem;
+  animation: runText 7s linear infinite;
+}
+
+@keyframes runText {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 h3 {
   background: linear-gradient(rgb(116, 164, 247), rgb(255, 255, 255));
-  margin: 0;
   padding: 1rem 0;
   border-radius: 0.25rem 0.25rem 0 0;
 }
@@ -36,10 +52,25 @@ h3 {
   border-radius: 0.25rem;
   box-shadow: 2px 2px 2px rgb(130, 130, 130);
   margin-bottom: 0.63rem;
+  padding-bottom: 0.5rem;
+}
+
+.grid-item:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.grid-item:first-child {
+  box-shadow: 3px 3px 3px rgb(95, 94, 0);
+}
+
+.grid-item:first-child h3 {
+  background: linear-gradient(rgb(247, 245, 116), rgb(255, 255, 255));
 }
 
 #grid-floats {
   display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 #grid-flex {
@@ -56,7 +87,6 @@ h3 {
 
 ul {
   list-style: none;
-  padding: 0;
 }
 
 p {
@@ -65,124 +95,103 @@ p {
   padding-right: 0.4rem;
 }
 
-/* big screen */
+/* Mobile screen */
 #grid-floats,
 #grid-flex {
-  padding: 0 1.37rem 0 2rem;
-}
-
-.grid-item:first-child {
-  box-shadow: 3px 3px 3px rgb(95, 94, 0);
-}
-
-.grid-item:first-child h3 {
-  background: linear-gradient(rgb(247, 245, 116), rgb(255, 255, 255));
-}
-
-#grid-floats {
-  grid-template-columns: repeat(4, 1fr);
+  padding: 0 0.37rem 0 1rem;
 }
 
 #grid-floats .grid-item {
   width: 95%;
-  grid-column: span 1;
+  grid-column: span 6;
 }
 
 #grid-floats .grid-item:first-child {
   width: 97%;
-  grid-column: span 2;
+  grid-column: span 12;
 }
 
 #grid-flex .grid-item {
-  width: 24%;
-  margin-right: 1%;
+  width: 48%;
+  margin-right: 2%;
 }
 
 #grid-flex .grid-item:first-child {
-  width: 49%;
+  width: 98%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 501px) {
   #grid-floats,
   #grid-flex {
     padding: 0 1.37rem 0 2rem;
   }
 
-  .grid-item:nth-child(-n + 2) {
+  .grid-item:nth-child(2) {
     box-shadow: 3px 3px 3px rgb(95, 94, 0);
   }
 
-  .grid-item:nth-child(-n + 2) h3 {
+  .grid-item:nth-child(2) h3 {
     background: linear-gradient(rgb(247, 245, 116), rgb(255, 255, 255));
-  }
-
-  #grid-floats {
-    grid-template-columns: repeat(6, 1fr);
   }
 
   #grid-floats .grid-item {
     width: 95%;
-    grid-column: span 2;
+    grid-column: span 4;
   }
 
   #grid-floats .grid-item:nth-child(-n + 2) {
     width: 97%;
-    grid-column: span 3;
+    grid-column: span 6;
   }
 
   #grid-flex .grid-item {
-    width: 32.3%;
-    margin-right: 1%;
+    width: 31.8%;
+    margin-right: 1.4%;
   }
 
   #grid-flex .grid-item:nth-child(-n + 2) {
-    width: 49%;
+    width: 48.5%;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 1025px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    padding: 4rem;
+  }
+
   #grid-floats,
   #grid-flex {
-    padding: 0 0.37rem 0 1rem;
+    padding: 0 1.37rem 0 2rem;
   }
 
-  .grid-item:nth-child(-n + 2) {
+  .grid-item:nth-child(2) {
     box-shadow: 2px 2px 2px rgb(130, 130, 130);
   }
-
-  .grid-item:nth-child(-n + 2) h3 {
+  .grid-item:nth-child(2) h3 {
     background: linear-gradient(rgb(116, 164, 247), rgb(255, 255, 255));
   }
 
-  .grid-item:first-child {
-    box-shadow: 3px 3px 3px rgb(95, 94, 0);
-  }
-
-  .grid-item:first-child h3 {
-    background: linear-gradient(rgb(247, 245, 116), rgb(255, 255, 255));
-  }
-
-  #grid-floats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  #grid-floats .grid-item,
-  #grid-floats .grid-item:nth-child(-n + 2) {
+  #grid-floats .grid-item {
     width: 95%;
-    grid-column: span 1;
+    grid-column: span 3;
   }
 
   #grid-floats .grid-item:first-child {
     width: 97%;
-    grid-column: span 2;
+    grid-column: span 6;
   }
 
   #grid-flex .grid-item {
-    width: 49%;
+    width: 24%;
     margin-right: 1%;
   }
 
   #grid-flex .grid-item:first-child {
-    width: 100%;
+    width: 49%;
   }
 }
