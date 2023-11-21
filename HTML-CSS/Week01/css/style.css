@@ -6,16 +6,45 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-div {
-  display: inline-flex;
+h1 {
+  text-align: center;
+  font-size: 50px;
 }
+
+h2 {
+  font-size: 25px;
+}
+
+h3 {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+p {
+  margin: 0;
+  text-align: justify;
+}
+
+ul {
+  margin-top: 3px;
+}
+
+.years {
+  font-style: italic;
+  font-size: 0.7rem;
+}
+
+main {
+  display: flex;
+}
+
 aside {
   max-width: 40%;
   background: #f5f6f6;
   padding: 20px;
 }
 
-main {
+div {
   max-width: 60%;
   padding: 20px;
 }
@@ -43,29 +72,4 @@ img {
 .contact-link:hover,
 .project-link:hover {
   color: rgb(113, 132, 155);
-}
-
-i {
-  margin-right: 10px;
-}
-
-h1 {
-  text-align: center;
-  font-size: 50px;
-}
-
-h2 {
-  font-size: 25px;
-}
-h3 {
-  font-size: 16px;
-  margin-bottom: 3px;
-}
-
-p {
-  margin: 0;
-}
-
-ul {
-  margin-top: 3px;
 }
