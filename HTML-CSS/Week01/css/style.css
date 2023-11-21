@@ -56,6 +56,10 @@ img {
   margin: 0 auto;
 }
 
+i {
+  margin-right: 10px;
+}
+
 .contacts {
   list-style: none;
   padding-left: 0;
