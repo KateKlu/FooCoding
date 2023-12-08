@@ -8,8 +8,7 @@ let myString = "hello,this,is,a,difficult,to,read,sentence";
 console.log(`My string is: ${myString}`);
 console.log(`Length of my string is: ${myString.length}`);
 
-const myStringInArray = myString.split(',');
-myString = myStringInArray.join(' ');
+myString = myString.split(',').join(' ');
 
 console.log(`My new string is: ${myString}`);
 
