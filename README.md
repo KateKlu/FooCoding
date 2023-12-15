@@ -12,7 +12,7 @@
 </ul>
 <h2>JavaScript2</h2>
 <ul>
-  <li>Week01</li>
+  <li><a href="https://kateklu.github.io/foocoding/JavaScript/JS2/week01/">Week01</a></li>
   <li>Week02</li>
 </ul>
 
