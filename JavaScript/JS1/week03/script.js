@@ -334,4 +334,4 @@ console.log("let's check a result");
 let bar2 = '6';
 let bar3 = true;
 console.log(typeof typeof bar2);
-console.log(typeof typeof bar2);
+console.log(typeof typeof bar3);
