@@ -1,0 +1,5 @@
+[
+  { "idCounter": 2 },
+  { "id": 1, "name": "Kate", "email": "kate@gmail.com", "password": "111" },
+  { "id": 2, "name": "Ros", "email": "ros@gmail.com", "password": "222" }
+]
